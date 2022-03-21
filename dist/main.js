@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("/* eslint-disable no-console */\nconst merry = () => {\n    console.log('gatita bonita');\n};\nmerry();\nconst btnGif = document.getElementById('btnGif');\nconst imgGif = document.getElementById('imgGif');\n\nfunction askGif() {\n    fetch('https://api.giphy.com/v1/gifs/translate?api_key=JkHEEFcPelmB7FkjO1QLrNAMn9NV61Vy&s=cats', { mode: 'cors' })\n        .then((x) => x.json()).then((y) => { imgGif.src = y.data.images.original.url; });\n}\n\nbtnGif.onclick = askGif;\n\n\n//# sourceURL=webpack://gifsapidiegoo/./src/index.js?");
+eval("/* eslint-disable no-console */\nconst merry = () => {\n    console.log('gatita bonita');\n};\nmerry();\nconst imgGif = document.getElementById('imgGif');\nconst form = document.querySelector('form');\nconst text = document.querySelector('input');\n\nfunction askGif(busqueda) {\n    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=JkHEEFcPelmB7FkjO1QLrNAMn9NV61Vy&s=${busqueda}`, { mode: 'cors' })\n        .then((x) => x.json()).then((y) => { imgGif.src = y.data.images.original.url; });\n}\naskGif();\n\nform.addEventListener('submit', (event) => {\n    event.preventDefault();\n    const search = text.value;\n    askGif(search);\n    form.reset();\n});\n\n\n//# sourceURL=webpack://gifsapidiegoo/./src/index.js?");
 
 /***/ })
 
