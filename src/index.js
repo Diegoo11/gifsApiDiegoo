@@ -7,8 +7,8 @@ const btnGif = document.getElementById('btnGif');
 const imgGif = document.getElementById('imgGif');
 
 function askGif() {
-    fetch('https://api.giphy.com/v1/gifs/translate?api_key=JkHEEFcPelmB7FkjO1QLrNAMn9NV61Vy&s=cats', { mode: 'cors' })
-        .then((x) => x.json()).then((y) => { imgGif.src = y.data.images.original.url; });
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=arequipa&appid=bf3845e91d594d20dd852be6dd9e6a9b', { mode: 'cors' })
+        .then((x) => x.json()).then((y) => { console.log(y); });
 }
 
 btnGif.onclick = askGif;
