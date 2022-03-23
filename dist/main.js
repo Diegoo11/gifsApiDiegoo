@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("/* eslint-disable no-console */\nconst merry = () => {\n    console.log('gatita bonita');\n};\nmerry();\nconst btnGif = document.getElementById('btnGif');\nconst imgGif = document.getElementById('imgGif');\n\nfunction askGif() {\n    fetch('https://api.giphy.com/v1/gifs/translate?api_key=JkHEEFcPelmB7FkjO1QLrNAMn9NV61Vy&s=cats', { mode: 'cors' })\n        .then((x) => x.json()).then((y) => { imgGif.src = y.data.images.original.url; });\n}\n\nbtnGif.onclick = askGif;\n\n\n//# sourceURL=webpack://gifsapidiegoo/./src/index.js?");
+eval("/* eslint-disable no-console */\nconst merry = () => {\n    console.log('gatita bonita');\n};\nmerry();\nconst btnGif = document.getElementById('btnGif');\nconst imgGif = document.getElementById('imgGif');\n\nfunction askGif() {\n    fetch('https://api.openweathermap.org/data/2.5/weather?q=arequipa&appid=bf3845e91d594d20dd852be6dd9e6a9b', { mode: 'cors' })\n        .then((x) => x.json()).then((y) => { console.log(y); });\n}\n\nbtnGif.onclick = askGif;\n\n\n//# sourceURL=webpack://gifsapidiegoo/./src/index.js?");
 
 /***/ })
 
